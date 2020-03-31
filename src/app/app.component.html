@@ -1,0 +1,29 @@
+<table class="table table-bordered gene-table">
+  <tbody>
+    <tr *ngFor="let geneArray of geneMatrix; let i = index">
+      <td
+        class="align-middle cell"
+        *ngFor="let gene of geneArray; let j = index"
+        [ngClass]="{ 'cell-background-painted': isOk(i, j) }"
+      >
+        <div class="item-value">
+          {{ gene.value }}
+        </div>
+        <p id="{{ gene.id }}" class="item-point">
+          ●
+        </p>
+      </td>
+    </tr>
+  </tbody>
+  <svg id="mSVG">
+    <line
+      *ngFor="let line of lineList"
+      stroke-width="2px"
+      stroke="#e9b2b2"
+      [attr.x1]="line.x1"
+      [attr.y1]="line.y1 + 3"
+      [attr.x2]="line.x2"
+      [attr.y2]="line.y2 + 3"
+    />
+  </svg>
+</table>
