@@ -1,3 +1,7 @@
+# Sample Image
+
+![image](https://github.com/CagriAldemir/gene-dot-plot/blob/master/sample-image.png?raw=true)
+
 # GeneDotPlot
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
